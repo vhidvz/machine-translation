@@ -19,7 +19,7 @@ app = FastAPI(
 model = MachineTranslation().load_model()
 
 
-class TextInput(BaseModel):
+class RequestModel(BaseModel):
     text: str
     src_lang: str = "en"
     target_lang: str
@@ -31,7 +31,7 @@ class ResponseModel(BaseModel):
 
 
 @app.post("/translate", response_model=ResponseModel)
-def translate(payload: TextInput):
+def translate(payload: RequestModel):
     # Ensure text is provided
     if not payload.text:
         raise HTTPException(status_code=400, detail="Text input is required.")
