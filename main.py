@@ -13,7 +13,7 @@ dotenv.load_dotenv()
 app = FastAPI(
     title="Machine Translation",
     description="facebook/mbart-large-50-many-to-many-mmt",
-    version="1.0.0"
+    version="1.0.1"
 )
 
 model = MachineTranslation().load_model()
