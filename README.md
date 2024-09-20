@@ -1,20 +1,20 @@
 # Quick Start
 
-```sh
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
+Multilingual machine translation microservice powered by the Facebook/mBART-large model, offering high-quality translations across multiple languages with contextual accuracy and fluency.
 
 ```sh
-python main.py
-python model.py
-
-fastapi run --workers 4 main.py
-uvicorn main:app --host 0.0.0.0 --port 8080 --workers 4
+git clone git@github.com:vhidvz/machine-translation.git
+cd question-answering && docker-compose up -d
 ```
+
+Endpoints are fully documented using OpenAPI Specification 3 (OAS3) at:
+
+- ReDoc: <http://localhost:8000/redoc>
+- Swagger: <http://localhost:8000/docs>
 
 ## Documentation
+
+To generate the documentation for the python model, execute the following command:
 
 ```sh
 pdoc --output-dir docs model.py
