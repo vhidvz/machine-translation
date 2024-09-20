@@ -4,7 +4,7 @@ Multilingual machine translation microservice powered by the Facebook/mBART-larg
 
 ```sh
 git clone git@github.com:vhidvz/machine-translation.git
-cd question-answering && docker-compose up -d
+cd machine-translation && docker-compose up -d
 ```
 
 Endpoints are fully documented using OpenAPI Specification 3 (OAS3) at:
